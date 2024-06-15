@@ -1,0 +1,11 @@
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.There is only one repeated number in nums, return this repeated number. Solve the problem using set.
+
+Program:
+n = list(map(int,input().split()))
+n_set=set()
+for num in n:
+    if num in n_set:
+        print(num)
+        break
+    else:
+        n_set.add(num) 
