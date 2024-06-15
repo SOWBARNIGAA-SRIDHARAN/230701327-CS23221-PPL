@@ -1,0 +1,18 @@
+Given an array of names of candidates in an election. A candidate name in the array represents a vote cast to the candidate. Print the name of candidates received Max vote. If there is tie, print a lexicographically smaller name.
+
+Program:
+try:
+    n=int(input())
+    votes = {}
+    for _ in range(n):
+        candidate = input()
+        if candidate in votes:
+            votes[candidate] += 1
+        else:
+            votes[candidate] = 1
+    max_votes = max(votes.values())
+    winner = [candidate for candidate, votes in votes.items() if votes == max_votes]
+    winner = min(winner)
+    print(winner)
+except EOFError:
+    print("No input provided") 
