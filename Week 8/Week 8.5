@@ -1,0 +1,22 @@
+Write a program to eliminate the common elements in the given 2 arrays and print only the non-repeating elements and the total number of such non-repeating elements.
+Input Format:
+The first line contains space-separated values, denoting the size of the two arrays in integer format respectively.
+The next two lines contain the space-separated integer arrays to be compared.
+
+Program:
+def remove_common(a,b):
+    common = list(set(a) - set(b))
+    common1 = list(set(b) - set(a))
+    common3 = common+common1
+    if len(common3) > 0:
+        for i in range(len(common3)):
+            print(common3[i],'',end='')
+        print('')
+        print(len(common3))
+    else:
+        print('NO SUCH ELEMENTS')
+num = input()
+a = set (map(int,input().split()))
+b = set (map(int,input().split()))
+remove_common(a,b)
+ 
