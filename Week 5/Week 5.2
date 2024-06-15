@@ -1,0 +1,23 @@
+Given an array A of sorted integers and another non negative integer k, find if there exists 2 indices i and j such that A[i] - A[j] = k, i != j.
+Input Format
+1.      First line is number of test cases T. Following T lines contain:
+2.      N, followed by N integers of the array
+3.      The non-negative integer k
+Output format
+Print 1 if such a pair exists and 0 if it doesn’t.
+
+Program:
+T = int(input(""))
+for _ in range(T):
+    N = int(input(""))
+    arr = []
+    for _ in range(N):
+        arr.append(int(input("")))
+    k = int(input(""))
+    arr_set = set(arr)
+    found = 0
+    for num in arr:
+        if (num - k) in arr_set or (num + k) in arr_set:
+            found = 1
+            break
+    print(found)
