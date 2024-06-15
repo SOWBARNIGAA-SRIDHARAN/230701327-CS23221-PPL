@@ -1,0 +1,10 @@
+Given an integer N, check whether N the given number can be made a perfect square after adding 1 to it.
+
+Program:
+
+n=int(input())+1
+a = int(n**0.5)
+if(n==a*a):
+    print("Yes")
+else:
+    print("No")
