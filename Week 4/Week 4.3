@@ -1,0 +1,17 @@
+Write a program that finds whether the given number N is Prime or not. If the number is prime, the program should return 2 else it must return 1.
+Assumption: 2 <= N <=5000, where N is the given number.
+
+Program:
+
+N = int(input())
+is_prime = 2
+if N == 2:
+    is_prime = 2
+elif N % 2 == 0:
+    is_prime = 1  
+else:
+    for i in range(3, int(N**0.5) + 1, 2):
+        if N % i == 0:
+            is_prime = 1  # Not prime
+            break
+print(is_prime)
