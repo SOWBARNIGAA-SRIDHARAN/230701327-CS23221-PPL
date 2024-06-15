@@ -1,0 +1,14 @@
+Write a program to return the nth number in the fibonacci series. The value of N will be passed to the program as input.
+
+Program:
+
+N = int(input())
+a, b = 0, 1
+if N == 1:
+    print(a)
+elif N == 2:
+    print(b)
+else:
+    for _ in range(2, N):
+        a, b = b, a + b  
+    print(b)  # b is the nth Fibonacci number
