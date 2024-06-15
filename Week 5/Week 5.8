@@ -1,0 +1,18 @@
+Merge Two Sorted Arrays Without Duplication
+Output is a merged array without duplicates.
+Input Format
+N1 - no of elements in array 1
+Array elements for array 1
+N2 - no of elements in array 2
+Array elements for array2
+Output Format
+Display the merged array
+
+
+Program:
+N1 = int(input())
+array1 = [int(input()) for _ in range(N1)]
+N2 = int(input())
+array2 = [int(input()) for _ in range(N2)]
+merged_array = sorted(set(array1 + array2))
+print(" ".join(map(str, merged_array))) 
