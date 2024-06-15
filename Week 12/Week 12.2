@@ -1,0 +1,12 @@
+Given an array activities representing the number of activities each user has participated in and an integer k, your job is to return the number of unique pairs (i, j) where activities[i] - activities[j] = k, and i < j. The absolute difference between the activities should be exactly k.
+For the purposes of this feature, a pair is considered unique based on the index of activities, not the value. That is, if there are two users with the same number of activities, they are considered distinct entities.
+
+Program:
+def countKDiff (nums, k):
+        count=0
+        from collections import Counter
+        mydict=Counter(nums)   
+        for i in mydict:
+            if i+k in mydict:
+                count=count+ mydict[i]*mydict[i+k]  
+        return count
