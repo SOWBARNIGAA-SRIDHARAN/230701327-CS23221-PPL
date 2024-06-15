@@ -1,0 +1,18 @@
+Develop a Python program that safely calculates the square root of a number provided by the user. Handle exceptions for negative inputs and non-numeric inputs.
+Input Format:
+User inputs a number.
+Output Format:
+Print the square root of the number or an error message if an exception occurs.
+
+Program: 
+import math
+user_input = input("Please enter a number: ").strip()
+try:
+	number = float(user_input)
+	if number < 0:
+		print("Error: Cannot calculate the square root of a negative number.")
+	else:
+		square_root = math.sqrt(number)
+		print(f"The square root of {number:.2f} is {square_root:.2f}")
+except ValueError:
+	print(f"Error: could not convert string to float")
