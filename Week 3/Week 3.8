@@ -1,0 +1,11 @@
+Three numbers form a Pythagorean triple if the sum of squares of two numbers is equal to the square of the third.
+For example, 3, 5 and 4 form a Pythagorean triple, since 3*3 + 4*4 = 25 = 5*5 
+You are given three integers, a, b, and c. They need not be given in increasing order. If they form a Pythagorean triple, then print "Yes", otherwise, print "No". 
+
+Program:
+vars = sorted([int(input()), int(input()), int(input())])
+if vars[2] ** 2 == vars[0] ** 2 + vars[1] ** 2 :
+    print("yes")
+else:
+    print("no")
+ 
