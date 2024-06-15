@@ -1,0 +1,22 @@
+Develop a Python program that manages shoe inventory and processes sales transactions to determine the total revenue generated. The program should handle inputs of shoe sizes available in the shop, track the number of each size, and match these with customer purchase requests. Each transaction should only proceed if the desired shoe size is in stock, and the inventory should update accordingly after each sale.
+
+Program:
+from collections import Counter
+def calculate_total_revenue(shoe_inventory, customer_requests):
+    inventory_counter = Counter(shoe_inventory)
+    total_revenue = 0
+    for size, price in customer_requests:
+        if inventory_counter[size] > 0:
+            total_revenue += price
+            inventory_counter[size] -= 1
+    return total_revenue
+	
+X = int(input())
+shoe_inventory = list(map(int, input().split()))
+N = int(input())
+customer_requests = []
+for _ in range(N):
+	size, price = map(int, input().split())
+	customer_requests.append((size, price))
+total_revenue = calculate_total_revenue(shoe_inventory, customer_requests)
+print(total_revenue)
