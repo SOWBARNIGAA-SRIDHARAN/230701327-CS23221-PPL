@@ -1,0 +1,14 @@
+Write a code to check whether product of digits at even places is divisible by sum of digits at odd place of a positive integer.
+
+Program:
+def productDigits(n):
+    num = str(n)
+    even = 1
+    odd = 0
+    for i,digit in enumerate(num):
+        digit = int(digit)
+        if(i+1)%2 == 0: 
+            even *= digit
+        else:
+            odd += digit
+    return even % odd == 0 
